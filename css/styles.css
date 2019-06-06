@@ -1,4 +1,6 @@
-/*Global layout*/
+/*------------------------------------*\
+  #SECTION-TITLE
+\*------------------------------------*/
 
 * {
   box-sizing: border-box;
@@ -35,6 +37,15 @@ h2 {
   font-size: 1em;
   margin-top: 20px;
   margin-bottom: 40px;
+}
+
+h3 {
+  margin: 10px 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+p {
+  line-height: 1.5em;
 }
 
 a {
@@ -85,9 +96,25 @@ a:hover{
   width: 100%;
 }
 
-h3 {
-  margin: 10px 0;
-  font-family: 'Roboto', sans-serif;
+.skills li {
+  border-radius: 6px;
+  display: inline-block;
+  background: #ff9904;
+  color: white;
+  padding: 5px 10px;
+  margin: 2px;
+}
+
+.skills li:nth-child(odd) {
+  background: #0399ff;
+}
+
+.contact {
+  border-top: 1px solid #e7e7e7;
+}
+
+.skills ul {
+  margin: 40px 0;
 }
 
 .contact ul {
@@ -123,13 +150,16 @@ clear: both;
 display: table;
 }
 
-/*media queries*/
+/*------------------------------------*\
+  #MEDIA-QUERIE: 768px
+\*------------------------------------*/
 
 @media (min-width: 768px) {
   h1 {
     display: inline-block;
     margin: 0;
   }
+
   nav {
     position: relative;
   }
@@ -150,6 +180,7 @@ display: table;
     padding-top: 40px;
     padding-bottom: 40px;
   }
+
   .profile p {
     width: 60%;
     float: left;
@@ -157,43 +188,63 @@ display: table;
     margin-top: 0;
     padding-right: 20px;
   }
+
   .profile img {
     width: 40%;
     float: right;
   }
+
   .project {
       float: left;
-      width: 50%;
       padding: 0 10px;
+      width: 50%;
   }
-  .contact {
-    padding: 30px 80px;
+
+  .contact p,
+  .skills p {
+    width: 75%;
+    margin: 20px auto;
   }
+
   .large-footer {
     display: block;
     margin-left: 30px;
   }
+
   footer a {
     font-size: 14px;
   }
+
   footer ul li:last-child {
     display: none;
   }
 }
 
+ul.skills {
+  padding: 0;
+  text-align: center;
+}
+
+/*------------------------------------*\
+  #MEDIA-QUERIE: 1024px
+\*------------------------------------*/
+
 @media (min-width: 1024px) {
   .project {
       width: 33%;
   }
+
   nav a {
     margin-top: 0;
   }
+
   nav ul {
     float: right;
     position: inherit;
     left: 0;
     transform: translateX(0);
   }
+
   h1 {
     float: left;
   }
